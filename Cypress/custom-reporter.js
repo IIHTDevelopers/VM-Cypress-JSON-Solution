@@ -40,6 +40,50 @@ class CypressCustomReporter {
     }
   }
 
+  // logTestResult(test, status, error) {
+  //   const testNameArray = test.title; // Get the test title array
+  //   const testName = Array.isArray(testNameArray) ? testNameArray.join(' - ') : testNameArray;
+
+  //   if (typeof testName !== 'string') {
+  //     console.error('Test title is not a valid string:', testName);
+  //     return;
+  //   }
+
+  //   const fileName = testName.split(' ')[1]?.toLowerCase() || 'boundary'; // Default to 'boundary'
+
+  //   // Prepare result DTO
+  //   const resultScore = status === 'passed' ? 1 : 0;
+  //   const resultStatus = status === 'passed' ? 'Passed' : 'Failed';
+
+  //   const testCaseResult = {
+  //     methodName: this.camelCase(testName),
+  //     methodType: 'boundary',
+  //     actualScore: 1,
+  //     earnedScore: resultScore,
+  //     status: resultStatus,
+  //     isMandatory: true,
+  //     erroMessage: error || '',
+  //   };
+
+  //   const GUID = 'd907aa7b-3b6d-4940-8d09-28329ccbc070';
+  //   const testResults = {
+  //     testCaseResults: { [GUID]: testCaseResult },
+  //     customData: this.customData,
+  //   };
+
+  //   // Write results to files
+  //   const finalResult = JSON.stringify(testResults, null, 2);
+  //   fs.appendFileSync('./test.txt', `${finalResult}\n`);
+
+  //   const fileOutput = `${this.camelCase(testName)}=${status === 'passed'}`;
+  //   const outputFile = this.outputFiles[fileName] || './output_boundary_revised.txt';
+  //   fs.appendFileSync(outputFile, `${fileOutput}\n`);
+  //   console.log(`Writing to file: ${outputFile} with content: ${fileOutput}`);
+
+  //   // Add test details to XML
+  //   this.prepareXmlFile(test, resultStatus);
+  // }
+
   logTestResult(test, status, error) {
     const testNameArray = test.title; // Get the test title array
     const testName = Array.isArray(testNameArray) ? testNameArray.join(' - ') : testNameArray;
@@ -66,8 +110,12 @@ class CypressCustomReporter {
     };
 
     const GUID = 'd907aa7b-3b6d-4940-8d09-28329ccbc070';
+
+    // Convert testCaseResults to a stringified object
+    const testCaseResultsString = JSON.stringify({ [GUID]: testCaseResult });
+
     const testResults = {
-      testCaseResults: { [GUID]: testCaseResult },
+      testCaseResults: testCaseResultsString, // Store as stringified JSON
       customData: this.customData,
     };
 
