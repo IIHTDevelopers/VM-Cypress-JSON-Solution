@@ -51,92 +51,91 @@ describe("Yaksha", () => {
       });
     });
 
-    // it("TS-3 Verify Patient Search with Valid Data for appointment", () => {
-    //   appointment.appointmentDropdownClick();
-    //   appointment.counterSelectionClick();
-    //   appointment.getFirstPatientName().then((patientName) => {
-    //     cy.log(`Searching for patient: ${patientName}`);
-    //     appointment.searchPatient(patientName);
-    //     cy.wait(3000);
-    //     appointment.validatePatientDetail(patientName);
-    //   });
-    // });
+    it("TS-3 Verify Patient Search with Valid Data for appointment", () => {
+      appointment.appointmentDropdownClick();
+      appointment.counterSelectionClick();
+      appointment.getFirstPatientName().then((patientName) => {
+        cy.log(`Searching for patient: ${patientName}`);
+        appointment.searchPatient(patientName);
+        cy.wait(3000);
+        appointment.validatePatientDetail(patientName);
+      });
+    });
 
-    // it("TS-4 Activate Counter in Dispensary", () => {
-    //   dispensaryPage.verifyActiveCounterMessageInDispensary();
-    // });
+    it("TS-4 Activate Counter in Dispensary", () => {
+      dispensaryPage.verifyActiveCounterMessageInDispensary();
+    });
 
-    // it("TS-5 Purchase Request List Load", () => {
-    //   procurement.verifyAllElementsVisible();
-    // });
+    it("TS-5 Purchase Request List Load", () => {
+      procurement.verifyAllElementsVisible();
+    });
 
-    // it("TS-6 Lab Dashboard Data Validation", () => {
-    //   laboratoryPage.verifyErrorMessage();
-    // });
+    it("TS-6 Lab Dashboard Data Validation", () => {
+      laboratoryPage.verifyErrorMessage();
+    });
 
-    // it("TS-7 Handle Alert on Billing Counter", () => {
-    //   radiologyPage
-    //     .performRadiologyRequestAndHandleAlert("2020-01-01")
-    //     .then((result) => {
-    //       expect(result).to.be.true;
-    //     });
-    // });
+    it("TS-7 Handle Alert on Billing Counter", () => {
+      radiologyPage
+        .performRadiologyRequestAndHandleAlert("2020-01-01")
+        .then((result) => {
+          expect(result).to.be.true;
+        });
+    });
 
-    // it("TS-8 Data-Driven Testing for Patient Search", () => {
-    //   patient.searchAndVerifyPatients();
-    // });
+    it("TS-8 Data-Driven Testing for Patient Search", () => {
+      patient.searchAndVerifyPatients();
+    });
 
-    // it("TS-9 Error Handling and Logging in Purchase Request List", () => {
-    //   procurement.verifyNoticeMessageAfterEnteringIncorrectFilters();
-    // });
+    it("TS-9 Error Handling and Logging in Purchase Request List", () => {
+      procurement.verifyNoticeMessageAfterEnteringIncorrectFilters();
+    });
 
-    // it("TS-10 Keyword-Driven Framework for Appointment Search", () => {
-    //   appointment.searchAndVerifyPatient();
-    // });
+    it("TS-10 Keyword-Driven Framework for Appointment Search", () => {
+      appointment.searchAndVerifyPatient();
+    });
 
-    // it("TS-11 Modular Script for Patient Search", () => {
-    //   appointment.searchPatientInAppointment();
-    //   patient.searchPatientInPatientPage();
-    //   adt.searchPatientInADT();
-    // });
+    it("TS-11 Modular Script for Patient Search", () => {
+      appointment.searchPatientInAppointment();
+      patient.searchPatientInPatientPage();
+      adt.searchPatientInADT();
+    });
 
-    // it("TS-12 Verify Assertion for Counter Activation", () => {
-    //   dispensaryPage.verifyCounterisActivated();
-    // });
+    it("TS-12 Verify Assertion for Counter Activation", () => {
+      dispensaryPage.verifyCounterisActivated();
+    });
 
-    // it("TS-14 Verify Locator Strategy for Appointment Search", () => {
-    //   appointment.searchAndVerifyPatientList();
-    // });
+    it("TS-14 Verify Locator Strategy for Appointment Search", () => {
+      appointment.searchAndVerifyPatientList();
+    });
 
-    // it("TS-15 Element Inspection and Handling Alerts in Lab Dashboard", () => {
-    //   laboratoryPage.verifyStarTooltip();
-    // });
+    it("TS-15 Element Inspection and Handling Alerts in Lab Dashboard", () => {
+      laboratoryPage.verifyStarTooltip();
+    });
 
-    // it("TS-16 Navigation Exception Handling on Dispensary Page", () => {
-    //   dispensaryPage.navigateToDispensary();
-    // });
+    it("TS-16 Navigation Exception Handling on Dispensary Page", () => {
+      dispensaryPage.navigateToDispensary();
+    });
 
-    // it("TS-17 Web Element Handling for Dropdowns in Purchase Request", () => {
-    //   const fromDate = "2024-01-01";
-    //   const toDate = "2024-11-06";
+    it("TS-17 Web Element Handling for Dropdowns in Purchase Request", () => {
+      const fromDate = "2024-01-01";
+      const toDate = "2024-11-06";
 
-    //   procurement
-    //     .verifyRequestedDateColumnDateWithinRange(fromDate, toDate)
-    //     .then((result) => {
-    //       expect(result).to.be.true;
-    //     });
-    // });
+      procurement
+        .verifyRequestedDateColumnDateWithinRange(fromDate, toDate)
+        .then((result) => {
+          expect(result).to.be.true;
+        });
+    });
 
-    // it("TS-18 Form Authentication and Error Messages", () => {
-    //   login.clickAdmin();
-    //   login.clickLogout();
-    //   cy.wait(3000);
-    //   cy.invalidLogin(login, home);
-    // });
+    it("TS-18 Form Authentication and Error Messages", () => {
+      login.clickAdmin();
+      login.clickLogout();
+      cy.wait(3000);
+      cy.invalidLogin(login, home);
+    });
 
     // Run after all tests
     after(() => {
       cy.closeBrowser();
     });
   });
-// });
