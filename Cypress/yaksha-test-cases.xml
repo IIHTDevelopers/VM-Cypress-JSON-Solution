@@ -1,0 +1,122 @@
+<test-cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Suite</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>automationSuiteForYakshaApplication-Ts-2VerifyPageNavigationAndLoadTimeForBillingCounter</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Suite</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>automationSuiteForYakshaApplication-Ts-3VerifyPatientSearchWithValidDataForAppointment</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Suite</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>automationSuiteForYakshaApplication-Ts-4ActivateCounterInDispensary</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Suite</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>automationSuiteForYakshaApplication-Ts-5PurchaseRequestListLoad</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Suite</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>automationSuiteForYakshaApplication-Ts-6LabDashboardDataValidation</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Suite</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>automationSuiteForYakshaApplication-Ts-7HandleAlertOnBillingCounter</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Suite</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>automationSuiteForYakshaApplication-Ts-8VerifyPatientSearchFunctionalityWithMultiplePatients</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Suite</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>automationSuiteForYakshaApplication-Ts-9ErrorHandlingAndLoggingInPurchaseRequestList</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Suite</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>automationSuiteForYakshaApplication-Ts-10ModularScriptForPatientSearch</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Suite</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>automationSuiteForYakshaApplication-Ts-11Verify'morningCounter'SelectionAndReportGenerationForTheSpecifiedDate</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Suite</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>automationSuiteForYakshaApplication-Ts-12Verify'newVisit'TabOpensWithAlt+NKeyboardShortcutInAppointmentPage</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Suite</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>automationSuiteForYakshaApplication-Ts-13VerifyTheTooltipTextOnHoverOfStarIconInLaboratory</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Suite</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>automationSuiteForYakshaApplication-Ts-14AddAndVerifyNewImagingTypeInRadiology</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Suite</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>automationSuiteForYakshaApplication-Ts-15WebElementHandlingForDropdownsInPurchaseRequest</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Suite</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>automationSuiteForYakshaApplication-Ts-16LoginWithInvalidCredentials</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+</test-cases>
