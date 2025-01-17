@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-17T10:46:10.590Z",
+    "end": "2024-09-17T10:46:32.681Z",
+    "duration": 22091,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a3c8db60-b5cc-4d0b-979b-1a23a326700c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\TestCase2.cy.js",
+      "file": "cypress\\e2e\\TestCase2.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d9a2541a-0ce9-48a4-87c7-2dde9d0e04c3",
+          "title": "Test Suite Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Testcase to login using POM Structure with Fixtures",
+              "fullTitle": "Test Suite Login Testcase to login using POM Structure with Fixtures",
+              "timedOut": null,
+              "duration": 10827,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Load data from fixture file\ncy.fixture('loginData').then(data => {\n  // Create an instance of the Login class (previously referred to as LoginPage)\n  const loginPage = new _LoginPage.default();\n  // Use the fixture data in the Page Object methods\n  loginPage.setUsername(data.userName);\n  loginPage.setPassword(data.password);\n  loginPage.submitButtonClick();\n});",
+              "err": {},
+              "uuid": "18277aeb-1f02-47b9-9c84-b41368ec0fef",
+              "parentUUID": "d9a2541a-0ce9-48a4-87c7-2dde9d0e04c3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Testcase to Login via login custom command with Fixtures",
+              "fullTitle": "Test Suite Login Testcase to Login via login custom command with Fixtures",
+              "timedOut": null,
+              "duration": 5515,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Load data from fixture file\ncy.fixture('loginData').then(data => {\n  cy.loginApplication(data.userName, data.password);\n});",
+              "err": {},
+              "uuid": "b539b45f-5e3e-460f-a186-26ce2d1e9ad2",
+              "parentUUID": "d9a2541a-0ce9-48a4-87c7-2dde9d0e04c3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "18277aeb-1f02-47b9-9c84-b41368ec0fef",
+            "b539b45f-5e3e-460f-a186-26ce2d1e9ad2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16342,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[name]-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "[name]-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
