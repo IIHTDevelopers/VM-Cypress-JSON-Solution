@@ -74,14 +74,13 @@ class LaboratoryPage {
    */
   verifyStarTooltip() {
     cy.xpath(this.laboratoryLinkXPath)
-      .click()
-      .then(() => {
-        cy.xpath(this.starIconXPath)
-          .trigger('mouseover') // Hover over the star icon
-          .invoke('attr', 'title') // Get the 'title' attribute
-          .should('exist') // Ensure the tooltip exists
-          .and('eq', 'Remember this Date'); // Verify the tooltip text
-      });
+            .click()
+            .then(() => {
+                cy.xpath(this.starIconXPath)
+                    .invoke('attr', 'title')
+                    .should('exist')
+                    .and('eq', 'Remember this Date');
+            });
   }
 
 }
