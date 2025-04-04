@@ -14,6 +14,7 @@ class CypressCustomReporter {
 
         this.customData = '';
 
+
         // Load custom data if available
         try {
             const data = fs.readFileSync('../../custom.ih', 'utf8');
@@ -21,6 +22,12 @@ class CypressCustomReporter {
         } catch (err) {
             console.error('Error reading custom data:', err.message);
         }
+
+        this.hostName = process.env.HOSTNAME;
+        this.attemptId = process.env.ATTEMPT_ID;
+        try{
+            this.filePath = __filename;
+        }catch(errr){}
 
         // Clear old output files
         this.clearOutputFiles();
@@ -71,9 +78,13 @@ class CypressCustomReporter {
         const testResults = {
             testCaseResults: testCaseResultsString,
             customData: this.customData,
+            hostName: this.hostName,
+            attemptId: this.attemptId,
+            filePath: this.filePath
         };
 
         const finalResult = JSON.stringify(testResults, null, 2);
+        console.log(finalResult);
         fs.appendFileSync('./test.txt', `${finalResult}\n`);
 
         const fileOutput = `${this.camelCase(testName)}=${status === 'passed'}`;
@@ -92,17 +103,16 @@ class CypressCustomReporter {
 
     async sendDataToServer(testResults) {
         console.log('Preparing to send below data to server...');
-        console.log(testResults);
+        // console.log(testResults);
 
-        const url =
-            'https://yaksha-prod-sbfn.azurewebsites.net/api/YakshaMFAEnqueue?code=jSTWTxtQ8kZgQ5FC0oLgoSgZG7UoU9Asnmxgp6hLLvYId/GW9ccoLw==';
+        const url = 'https://compiler.techademy.com/v1/mfa-results/push';
 
         try {
             const response = await axios
                 .post(url, testResults, {
                     headers: { 'Content-Type': 'application/json' },
                 });
-            console.log('Successfully sent data to the server.');
+            console.log('✅ Successfully sent data to the server.');
             console.log('Response Data:', response.data);
             console.log('Response Status:', response.status);
             return await new Promise((resolve) => {
@@ -113,7 +123,7 @@ class CypressCustomReporter {
                 }, 10000); // 10 seconds
             });
         } catch (error) {
-            console.error('Error sending data to the server.');
+            console.error(' ❌ Error sending data to the server. ❌');
             if (error.response) {
                 console.error('Error Response Data:', error.response.data);
                 console.error('Error Response Status:', error.response.status);
